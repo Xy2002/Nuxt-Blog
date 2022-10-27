@@ -1,0 +1,6 @@
+build
+coverage
+.output
+.nuxt
+.vscode
+node_modules

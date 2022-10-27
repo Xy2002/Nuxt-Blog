@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.nav-item {
+		@apply inline-block cursor-pointer relative;
+	}
+
+	.nav-item .nav-links {
+		@apply p-3 relative after:transition-all after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:rounded-r-sm after:rounded-b-sm after:-top-0.5 after:bg-primary after:w-0;
+	}
+
+	.arrow-right {
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+		border-left: 6px solid #ccc;
+		@apply ml-1;
+	}
+
+	.arrow-down {
+		border-top: 6px solid #ccc;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		@apply ml-1;
+	}
+
+	.dropdown-menu {
+		@apply bg-white absolute overflow-y-auto translate-y-0 box-border shadow-md py-2 top-full right-0 rounded-b-lg h-auto max-h-screen whitespace-nowrap m-0;
+	}
+
+	.nav-links-active {
+		@apply text-primary after:!w-2/5;
+	}
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	font-weight: normal;
+	src: url('~/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+* {
+	font-family: OpenSans;
+}
+
+body {
+	color: #5b5777;
+}

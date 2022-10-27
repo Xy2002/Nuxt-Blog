@@ -1,0 +1,13 @@
+diff --git a/node_modules/shiki-es/dist/shiki.node.mjs b/node_modules/shiki-es/dist/shiki.node.mjs
+index 9f92b77..c87f02e 100644
+--- a/node_modules/shiki-es/dist/shiki.node.mjs
++++ b/node_modules/shiki-es/dist/shiki.node.mjs
+@@ -163,7 +163,7 @@ const wasm = () => "AGFzbQEAAAABtQEZYAJ/fwF/YAF/AX9gA39/fwF/YAR/f39/AX9gAX8AYAV/
+ 
+ setCDN("-");
+ globalThis.__shiki_fetch__ = async (url) => {
+-  url = url.substr(1);
++  url = url.substr(1).split('shiki/')[1];
+   const _asset = assets[url];
+   if (!_asset) {
+     throw new Error(`Unknown asset: ${url}`);
