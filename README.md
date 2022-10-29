@@ -43,7 +43,7 @@ npm run preview
 
 ## To Do List
 
-[x]   Dark mode
-[x]   Responsive layout
--   Search in the site
-[x]   Toc
+- [x]   Dark mode
+- [x]   Responsive layout
+- [ ]  Search in the site
+- [x]   Toc
