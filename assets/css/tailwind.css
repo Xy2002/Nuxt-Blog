@@ -8,7 +8,7 @@
 	}
 
 	.nav-item .nav-links {
-		@apply p-3 relative after:transition-all after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:rounded-r-sm after:rounded-b-sm after:-top-0.5 after:bg-primary after:w-0;
+		@apply p-3 relative after:transition-all after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:rounded-r-sm after:rounded-b-sm after:-top-2.5 after:bg-primary after:w-0;
 	}
 
 	.arrow-right {
@@ -30,8 +30,12 @@
 	}
 
 	.nav-links-active {
-		@apply text-primary after:!w-2/5;
+		@apply text-primary after:!w-2/5 dark:text-darkPrimary;
 	}
+}
+
+h4 {
+	@apply text-lg font-bold;
 }
 
 @font-face {
@@ -46,4 +50,9 @@
 
 body {
 	color: #5b5777;
+	@apply overflow-y-scroll antialiased text-gray-700 bg-white dark:text-gray-200 dark:bg-black;
+}
+
+html {
+	scroll-padding-top: 64px;
 }

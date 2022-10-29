@@ -1,53 +1,58 @@
 <template>
-	<aside
-		v-if="hasChildren"
-		class="w-80 border-r border-r-gray-200 fixed box-border overflow-y-auto top-12 left-0 bottom-0"
-	>
-		<ul class="py-6 text-xl pl-0" style="line-height: 2; color: #2c3e50">
-			<!-- 二级菜单 -->
-			<li
-				v-for="(item, index) in children"
-				:key="index"
-				class="list-none"
-				:class="[item._path === route.fullPath ? 'text-primary' : '']"
+	<ul class="text-xl pl-0" style="line-height: 2">
+		<!-- depth 2 -->
+		<li
+			v-for="(item, index) in children"
+			:key="index"
+			class="list-none"
+			:class="[item._path === route.fullPath ? 'text-primary' : '']"
+		>
+			<nuxt-link
+				v-if="!item.children"
+				:to="item._path"
+				class="hover:bg-gray-100 u-text-gray-900 group flex w-full cursor-pointer items-center justify-between py-1.5 text-base font-semibold"
 			>
-				<nuxt-link
-					v-if="!item.children"
-					:to="item._path"
-					class="font-bold block hover:bg-gray-100 pl-8"
+				{{ item.title }}
+			</nuxt-link>
+			<!-- depth 3 -->
+			<section v-else class="font-bold">
+				<p
+					class="u-text-gray-900 group flex w-full items-center justify-between py-1.5 text-base font-semibold my-0 cursor-pointer"
+					@click="
+						collapsedMap[item._path] = !collapsedMap[item._path]
+					"
 				>
 					{{ item.title }}
-				</nuxt-link>
-				<!-- 三级菜单 -->
-				<section v-else class="font-bold">
-					<p class="my-0 flex items-center pl-8">
-						{{ item.title }}
-					</p>
-					<ul class="my-0 overflow-hidden">
-						<li
-							v-for="(
-								childrenItem, childrenIndex
-							) in item.children"
-							:key="childrenIndex"
-							class="block hover:bg-gray-100 text-lg"
-							:class="[
-								childrenItem._path === route.fullPath
-									? 'text-primary'
-									: '',
-							]"
-						>
-							<nuxt-link
-								:to="childrenItem._path"
-								class="block pl-2"
-							>
-								{{ childrenItem.title }}
-							</nuxt-link>
-						</li>
-					</ul>
-				</section>
-			</li>
-		</ul>
-	</aside>
+					<span
+						:class="[
+							collapsedMap[item._path]
+								? 'arrow-down'
+								: 'arrow-right',
+						]"
+					></span>
+				</p>
+				<ul
+					v-show="collapsedMap[item._path]"
+					class="my-0 overflow-hidden pl-0"
+				>
+					<li
+						v-for="(childrenItem, childrenIndex) in item.children"
+						:key="childrenIndex"
+						class="block hover:bg-gray-100 text-base border-l border-gray-200 hover:border-gray-400"
+						:class="[
+							childrenItem._path === route.fullPath
+								? ['text-primary', 'border-primary']
+								: '',
+						]"
+					>
+						<nuxt-link :to="childrenItem._path" class="block pl-4">
+							{{ childrenItem.title }}
+						</nuxt-link>
+					</li>
+				</ul>
+			</section>
+		</li>
+	</ul>
 </template>
 
 <script setup lang="ts">
@@ -57,6 +62,14 @@ const { data: navigation } = await useAsyncData('navigation', () =>
 )
 const parentPath = route.params.slug[0] ? '/' + route.params.slug[0] : '/'
 const currentRoute = navigation.value.find(item => item._path === parentPath)
-const hasChildren = !!currentRoute?.children
-const children = reactive(currentRoute?.children ? currentRoute.children : [])
+const children = reactive(currentRoute.children ? currentRoute.children : [])
+
+const collapsedMap = useState(`aside-collapse-map-${parentPath}`, () => {
+	return children
+		.filter(link => !!link.children)
+		.reduce((map, link) => {
+			map[link._path] = true
+			return map
+		}, {})
+})
 </script>
