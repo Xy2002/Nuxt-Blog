@@ -6,8 +6,8 @@
 			class="border-gray-100 hover:border-gray-300 list-none my-2 pl-4"
 			:class="[
 				!!item.children
-					? 'text-black'
-					: 'border-l-2 border-gray-100 hover:border-gray-300 text-gray-600  hover:bg-gray-100 cursor-pointer',
+					? 'text-black dark:text-white'
+					: 'border-l-2 border-gray-100 hover:border-gray-300 text-gray-600  hover:bg-gray-100 dark:hover:bg-transparent dark:hover:text-white cursor-pointer',
 				route.fullPath === item._path ? '!text-primary' : '',
 			]"
 		>

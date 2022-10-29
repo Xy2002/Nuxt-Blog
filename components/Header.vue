@@ -77,7 +77,7 @@
 						</div>
 						<ul
 							v-show="currentExtraHoverIndex === index"
-							class="dropdown-menu"
+							class="dropdown-menu px-0"
 						>
 							<NuxtLink
 								v-for="(subItem, subItemIndex) in item.subItem"
@@ -98,11 +98,13 @@
 			<div
 				class="flex items-center justify-end flex-none col-span-2 lg:gap-4 lg:pl-4 overflow-x-hidden"
 			>
+				<ColorModeSwitch />
 				<NuxtLink
 					v-for="(tool, index) in appConfig.nav.toolItem"
 					:key="index"
 					:to="tool.href"
 					:target="tool.target ? tool.target : '_blank'"
+					class="hidden lg:block"
 					><i
 						:class="[...tool.icon]"
 						class="text-xl flex items-center"

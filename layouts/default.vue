@@ -17,6 +17,7 @@
 				<slot />
 			</article>
 			<div
+				v-if="toc.links.length > 0"
 				class="lg:block sticky flex items-center px-4 -mx-4 toc top-[64px] lg:max-h-[calc(100vh-4rem)] sm:-mx-6 sm:px-6 lg:col-span-2 lg:mx-0 lg:self-start lg:bg-transparent lg:top-16 lg:px-0 lg:pt-8 lg:backdrop-blur-none overflow-y-auto overflow-x-hidden navbar"
 			>
 				<div class="w-full cursor-pointer sm:cursor-auto">
@@ -62,6 +63,7 @@ const currentRoute = navigation.value.find(item => item._path === parentPath)
 const hasChildren = !!currentRoute?.children
 const { toc } = useContent()
 const showNavbar = ref(false)
+const colorMode = useColorMode()
 </script>
 
 <style scoped>
@@ -76,5 +78,8 @@ const showNavbar = ref(false)
 	top: 0;
 	width: 100%;
 	z-index: -1;
+}
+.dark .navbar ::before {
+	background-color: black;
 }
 </style>

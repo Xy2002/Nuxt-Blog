@@ -6,7 +6,7 @@
 	>
 		<div
 			ref="reactiveNavRef"
-			class="w-full max-w-xs min-h-full px-4 pb-12 shadow bg-white sm:px-6"
+			class="w-full max-w-xs min-h-full px-4 pb-12 shadow bg-white dark:bg-black sm:px-6"
 		>
 			<div
 				class="flex items-center justify-between gap-2 border-b border-transparent h-header"

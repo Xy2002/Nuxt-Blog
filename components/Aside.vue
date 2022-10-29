@@ -10,7 +10,7 @@
 			<nuxt-link
 				v-if="!item.children"
 				:to="item._path"
-				class="hover:bg-gray-100 u-text-gray-900 group flex w-full cursor-pointer items-center justify-between py-1.5 text-base font-semibold"
+				class="hover:bg-gray-100 u-text-gray-900 group flex w-full cursor-pointer items-center justify-between py-1.5 text-base font-semibold dark:hover:bg-transparent dark:hover:text-white"
 			>
 				{{ item.title }}
 			</nuxt-link>
@@ -38,7 +38,7 @@
 					<li
 						v-for="(childrenItem, childrenIndex) in item.children"
 						:key="childrenIndex"
-						class="block hover:bg-gray-100 text-base border-l border-gray-200 hover:border-gray-400"
+						class="block hover:bg-gray-100 text-base border-l dark:hover:bg-transparent dark:hover:text-white border-gray-200 hover:border-gray-400"
 						:class="[
 							childrenItem._path === route.fullPath
 								? ['text-primary', 'border-primary']

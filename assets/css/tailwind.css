@@ -26,7 +26,8 @@
 	}
 
 	.dropdown-menu {
-		@apply bg-white absolute overflow-y-auto translate-y-0 box-border shadow-md py-2 top-full right-0 rounded-b-lg h-auto max-h-screen whitespace-nowrap m-0;
+		@apply bg-white absolute overflow-y-auto translate-y-0 box-border shadow-md py-2 top-full right-0 rounded-lg h-auto max-h-screen whitespace-nowrap m-0 dark:bg-black dark:border-opacity-20 dark:border-white dark:border;
+		box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
 	}
 
 	.nav-links-active {

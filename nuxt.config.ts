@@ -2,7 +2,7 @@ import { createResolver } from '@nuxt/kit'
 
 const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
-	modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
+	modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
 	tailwindcss: {
 		// add '~tailwind.config` alias
 		exposeConfig: true,
@@ -15,6 +15,20 @@ export default defineNuxtConfig({
 	content: {
 		highlight: {
 			theme: 'one-dark-pro',
+			preload: [
+				'json',
+				'js',
+				'ts',
+				'html',
+				'css',
+				'vue',
+				'diff',
+				'shell',
+				'markdown',
+				'yaml',
+				'bash',
+				'ini',
+			],
 		},
 		documentDriven: true,
 		markdown: {
@@ -32,4 +46,9 @@ export default defineNuxtConfig({
 		},
 		resolve('./components'),
 	],
+	colorMode: {
+		classSuffix: '',
+		dataValue: 'theme',
+	},
+	darkMode: 'class',
 })
