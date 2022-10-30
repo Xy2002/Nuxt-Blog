@@ -16,6 +16,7 @@
 				:class="[!hasChildren ? 'lg:col-start-3' : '']"
 			>
 				<slot />
+				<PrevNext />
 			</article>
 			<div
 				v-if="toc.links.length > 0"
