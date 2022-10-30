@@ -1,5 +1,5 @@
 <template>
-	<div class="text-3xl font-semibold">
+	<div class="text-center mx-auto my-0">
 		<slot />
 	</div>
 </template>
