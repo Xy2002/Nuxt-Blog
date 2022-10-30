@@ -13,6 +13,7 @@
 
 			<article
 				class="relative flex flex-col flex-1 pb-8 lg:mt-0 page-body lg:col-span-8 pt-4 lg:pt-8 main-content"
+				:class="[!hasChildren ? 'lg:col-start-3' : '']"
 			>
 				<slot />
 			</article>
