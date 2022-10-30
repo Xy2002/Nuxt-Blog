@@ -44,6 +44,11 @@ export default defineNuxtConfig({
 			path: resolve('./components/icons'),
 			global: true,
 		},
+		{
+			prefix: '',
+			path: resolve('./components/prose'),
+			global: true,
+		},
 		resolve('./components'),
 	],
 	colorMode: {
