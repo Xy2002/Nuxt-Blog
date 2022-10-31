@@ -49,9 +49,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- <Teleport to="body"> -->
 		<AsideNav />
-		<!-- </Teleport> -->
 	</div>
 </template>
 

@@ -20,8 +20,9 @@
 				</button>
 				<div class="flex items-center gap-4">
 					<div
-						class="flex items-center justify-end flex-none col-span-2 lg:gap-4 lg:pl-4 overflow-x-hidden"
+						class="flex items-center justify-end flex-none col-span-2 gap-2 lg:gap-4 lg:pl-4 overflow-x-hidden"
 					>
+						<ColorModeSwitch />
 						<NuxtLink
 							v-for="(tool, index) in appConfig.nav.toolItem"
 							:key="index"

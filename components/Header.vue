@@ -98,7 +98,8 @@
 			<div
 				class="flex items-center justify-end flex-none col-span-2 lg:gap-4 lg:pl-4 overflow-x-hidden"
 			>
-				<ColorModeSwitch />
+				<ColorModeSwitch class="hidden lg:block" />
+				<Search />
 				<NuxtLink
 					v-for="(tool, index) in appConfig.nav.toolItem"
 					:key="index"
