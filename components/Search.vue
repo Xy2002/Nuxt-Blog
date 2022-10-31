@@ -62,9 +62,10 @@ const reactiveDivRef = ref(null)
 
 watch(inputText, async newVal => {
 	if (!!newVal) {
-		searchResult.value = await queryContent()
+		let result = await queryContent()
 			.where({ title: { $regex: newVal } })
 			.find()
+		searchResult.value = result.filter(item => item._extension === 'md')
 	} else {
 		searchResult.value = []
 	}
