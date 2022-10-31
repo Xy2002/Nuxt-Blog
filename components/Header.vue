@@ -14,7 +14,11 @@
 				<NuxtLink class="font-semibold text-xl hidden lg:block" to="/">
 					{{ appConfig.blogName }}
 				</NuxtLink>
-				<button class="block lg:hidden" @click="menu.open()">
+				<button
+					class="block lg:hidden"
+					@click="menu.open()"
+					aria-label="Menu"
+				>
 					<IconMenu />
 				</button>
 			</div>

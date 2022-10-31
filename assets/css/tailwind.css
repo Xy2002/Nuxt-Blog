@@ -43,6 +43,7 @@ h4 {
 	font-family: 'OpenSans';
 	font-weight: normal;
 	src: url('~/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+	font-display: swap;
 }
 
 * {

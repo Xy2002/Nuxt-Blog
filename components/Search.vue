@@ -24,7 +24,7 @@
 								class="w-10/12 bg-white dark:bg-black outline-none"
 								v-model="inputText"
 							/>
-							<button>
+							<button aria-label="Close">
 								<IconClose class="dark:text-white text-black" />
 							</button>
 						</form>
