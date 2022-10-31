@@ -1,14 +1,21 @@
 <template>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		id="Layer_1"
-		data-name="Layer 1"
-		viewBox="0 0 24 24"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		aria-hidden="true"
+		role="img"
+		class="flex-shrink-0 w-5 h-5"
 		width="1em"
 		height="1em"
+		viewBox="0 0 24 24"
 	>
 		<path
-			d="M17.414,10.586,13.121,6.293,11.707,7.707,15,11H5v2H15l-3.293,3.293,1.414,1.414,4.293-4.293A2,2,0,0,0,17.414,10.586Z"
-		/>
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="m13 7l5 5m0 0l-5 5m5-5H6"
+		></path>
 	</svg>
 </template>

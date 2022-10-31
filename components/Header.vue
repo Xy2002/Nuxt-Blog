@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="sticky top-0 z-10 w-full border-b h-header border-gray-100 bg-white/80 dark:bg-black/80"
+		class="sticky top-0 z-10 w-full border-b h-header border-gray-100 dark:border-neutral-800 bg-white/80 dark:bg-black/80"
 		style="
 			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.04) !important;
 			backdrop-filter: saturate(180%) blur(20px);

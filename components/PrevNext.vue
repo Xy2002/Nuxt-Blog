@@ -25,7 +25,7 @@ const directory = link => {
 		<NuxtLink
 			v-if="prev"
 			:to="prev._path"
-			class="relative min-w-0 p-3 border rounded-lg hover:border-primary-500 dark:hover:border-primary-500 hover:text-primary-500 u-border-gray-100"
+			class="relative min-w-0 p-3 border rounded-lg hover:border-primary hover:text-primary border-gray-100 dark:border-neutral-800"
 		>
 			<p
 				class="h-4 mb-1 text-xs font-medium text-right truncate u-text-gray-500 my-0"
@@ -34,7 +34,7 @@ const directory = link => {
 			</p>
 
 			<p class="flex items-center gap-3 my-0">
-				<IconArrowLeft />
+				<IconArrowLeft class="dark:white" />
 				<span
 					class="flex-1 font-medium leading-5 text-right truncate"
 					>{{ prev.title }}</span
@@ -46,7 +46,7 @@ const directory = link => {
 		<NuxtLink
 			v-if="next"
 			:to="next._path"
-			class="relative min-w-0 p-3 border rounded-lg hover:border-primary-500 dark:hover:border-primary-500 hover:text-primary-500 u-border-gray-100"
+			class="relative min-w-0 p-3 border rounded-lg hover:border-primary hover:text-primary border-gray-100 dark:border-neutral-800"
 		>
 			<p
 				class="h-4 mb-1 text-xs font-medium truncate u-text-gray-500 my-0"
@@ -58,7 +58,7 @@ const directory = link => {
 				<span class="flex-1 font-medium leading-5 truncate">{{
 					next.title
 				}}</span>
-				<IconArrowRight />
+				<IconArrowRight class="dark:white" />
 			</p>
 		</NuxtLink>
 	</div>
