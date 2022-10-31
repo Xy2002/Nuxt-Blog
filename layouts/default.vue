@@ -65,7 +65,6 @@ const currentRoute = navigation.value.find(item => item._path === parentPath)
 const hasChildren = !!currentRoute?.children
 const { toc } = useContent()
 const showNavbar = ref(false)
-const colorMode = useColorMode()
 </script>
 
 <style scoped>
