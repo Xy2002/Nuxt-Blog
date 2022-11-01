@@ -4,11 +4,11 @@
 			<li
 				v-for="link in links"
 				:key="link.text"
-				class="list-none my-2 pl-3 text-gray-600 cursor-pointer"
+				class="list-none my-2 pl-3 text-gray-600 font-semibold cursor-pointer"
 				:class="[
 					activeHeadings.includes(link.id)
 						? '!text-primary'
-						: 'u-text-gray-500 hover:u-text-gray-900',
+						: 'text-gray-600 hover:text-primary',
 				]"
 			>
 				<a :href="`#${link.id}`">
