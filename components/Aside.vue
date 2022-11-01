@@ -38,11 +38,11 @@
 					<li
 						v-for="(childrenItem, childrenIndex) in item.children"
 						:key="childrenIndex"
-						class="block hover:bg-gray-100 text-sm text-gray-600 border-l dark:hover:bg-transparent dark:hover:text-white border-gray-200 hover:border-primary py-1.5 last:mb-4"
+						class="block hover:bg-gray-100 text-sm border-l dark:hover:bg-transparent dark:hover:text-white border-gray-200 hover:border-primary py-1.5 last:mb-4"
 						:class="[
 							childrenItem._path === route.path
 								? ['text-primary', 'border-primary']
-								: '',
+								: 'text-gray-600',
 						]"
 					>
 						<nuxt-link :to="childrenItem._path" class="block pl-4">
