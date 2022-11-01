@@ -44,6 +44,9 @@ watch(
 					...document.querySelectorAll(
 						'.document-driven-page h4, .main-content div h4'
 					),
+					...document.querySelectorAll(
+						'.document-driven-page h4, .main-content div h5'
+					),
 				])
 			}, 300)
 		}
