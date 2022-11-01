@@ -21,7 +21,7 @@ module.exports = {
 		// },
 		extend: {
 			colors: {
-				primary: '#5c6ac4',
+				primary: '#008cff',
 				darkPrimary: 'white',
 			},
 			height: {
