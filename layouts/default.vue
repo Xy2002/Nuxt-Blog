@@ -69,7 +69,19 @@ const hasChildren = !!currentRoute?.children
 const { toc, page } = useContent()
 
 useHead({
-	meta: [{ name: 'description', content: page.description }],
+	meta: [
+		{
+			name: 'description',
+			content:
+				page.value.description ||
+				page.value.summary ||
+				nuxtConfig.blogName,
+		},
+		{
+			name: 'keywords',
+			content: page.value.tags || ['Nuxt Content', 'Nuxt.js', 'Vue.js'],
+		},
+	],
 	titleTemplate: titleChunk => {
 		return titleChunk
 			? `${titleChunk} - ${nuxtConfig.blogName}`
