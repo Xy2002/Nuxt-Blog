@@ -96,6 +96,27 @@ ol {
 	list-style: decimal;
 }
 
+.dark table th,
+.dark table td {
+	border: 1px solid #30363d;
+}
+
+table th {
+	font-weight: 600;
+}
+
+table th {
+	color: black;
+}
+.dark table th {
+	color: #c9d1d9;
+}
+table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+.dark table tr:nth-child(2n) {
+	background-color: #161b22;
+}
 .task-list-item {
 	list-style: none;
 }

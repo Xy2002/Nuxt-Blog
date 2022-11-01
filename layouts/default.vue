@@ -19,9 +19,10 @@
 					<slot />
 					<PrevNext />
 				</article>
+				<!-- toc -->
 				<div
 					v-if="toc && toc.links && toc.links.length > 0"
-					class="lg:block sticky flex items-center px-4 -mx-4 toc top-[64px] lg:max-h-[calc(100vh-4rem)] sm:-mx-6 sm:px-6 lg:col-span-2 lg:mx-0 lg:self-start lg:bg-transparent lg:top-16 lg:px-0 lg:pt-8 lg:backdrop-blur-none overflow-y-auto overflow-x-hidden"
+					class="lg:block sticky flex items-center px-4 -mx-4 toc top-[64px] lg:max-h-[calc(100vh-4rem)] sm:-mx-6 sm:px-6 lg:col-span-2 lg:mx-0 lg:self-start lg:bg-transparent lg:top-16 lg:px-0 lg:pt-8 lg:backdrop-blur-none overflow-y-auto overflow-x-hidden dark:bg-black"
 				>
 					<div class="w-full cursor-pointer sm:cursor-auto">
 						<button class="flex items-center gap-1 py-3 lg:hidden">
