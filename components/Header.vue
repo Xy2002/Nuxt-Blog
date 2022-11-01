@@ -125,7 +125,6 @@ const { navigation } = useContent()
 const menu = useMenu()
 
 const navigateUrl = item => {
-	console.log(item)
 	let tempItem = item
 	while (tempItem) {
 		if (!!tempItem.children) {

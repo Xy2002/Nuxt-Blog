@@ -5,7 +5,7 @@
 			v-for="(item, index) in children"
 			:key="index"
 			class="list-none"
-			:class="[item._path === route.fullPath ? 'text-primary' : '']"
+			:class="[item._path === route.path ? 'text-primary' : '']"
 		>
 			<nuxt-link
 				v-if="!item.children"
@@ -40,7 +40,7 @@
 						:key="childrenIndex"
 						class="block hover:bg-gray-100 text-base border-l dark:hover:bg-transparent dark:hover:text-white border-gray-200 hover:border-gray-400"
 						:class="[
-							childrenItem._path === route.fullPath
+							childrenItem._path === route.path
 								? ['text-primary', 'border-primary']
 								: '',
 						]"
