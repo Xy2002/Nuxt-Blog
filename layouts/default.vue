@@ -78,7 +78,7 @@ useHead({
 		{
 			name: 'description',
 			content:
-				page.value?.description ||
+				page.value?.description.slice(0, 50) ||
 				page.value?.summary ||
 				nuxtConfig.blogName,
 		},
