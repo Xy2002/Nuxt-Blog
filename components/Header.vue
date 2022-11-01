@@ -24,7 +24,7 @@
 			</div>
 			<!-- part 2 of 3: nav or or blog name -->
 			<div
-				class="text-sm font-medium flex items-center justify-center flex-1 col-span-8"
+				class="text-sm font-semibold flex items-center justify-center flex-1 col-span-8"
 			>
 				<NuxtLink
 					class="font-semibold text-xl flex items-center flex-none lg:hidden"
@@ -82,7 +82,7 @@
 							<NuxtLink
 								v-for="(subItem, subItemIndex) in item.subItem"
 								:key="subItemIndex"
-								class="leading-6 h-6 block font-normal pr-6 pl-5 text-xs hover:text-primary"
+								class="leading-6 h-6 block font-semibold pr-6 pl-5 text-xs hover:text-primary"
 								:to="subItem.href"
 								target="_blank"
 							>

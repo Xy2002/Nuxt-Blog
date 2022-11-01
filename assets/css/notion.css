@@ -94,4 +94,7 @@ input[type='checkbox'] {
 p {
 	margin-top: 1em;
 	margin-bottom: 1em;
+	line-height: 1.5;
+	white-space: pre-wrap;
+	word-break: break-word;
 }

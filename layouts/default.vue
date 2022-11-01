@@ -68,6 +68,10 @@ const currentRoute = navigation.value.find(item => item._path === parentPath)
 const hasChildren = !!currentRoute?.children
 const { toc, page } = useContent()
 
+if (!page.value && route.path !== '/404') {
+	navigateTo('/')
+}
+
 useHead({
 	meta: [
 		{

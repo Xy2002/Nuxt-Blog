@@ -4,7 +4,7 @@
 			<li
 				v-for="link in links"
 				:key="link.text"
-				class="list-none my-2 pl-3 text-gray-600 font-semibold cursor-pointer"
+				class="list-none my-2 pl-2 text-gray-600 font-semibold cursor-pointer"
 				:class="[
 					activeHeadings.includes(link.id)
 						? '!text-primary'
