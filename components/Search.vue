@@ -12,22 +12,32 @@
 					class="lg:mt-20 mx-auto mb-auto dark:bg-zinc-700 bg-slate-100 rounded-md max-w-full h-full lg:h-auto lg:max-w-xl relative"
 					ref="reactiveDivRef"
 				>
-					<div id="header" class="box-border mx-6 flex py-4">
+					<div
+						id="header"
+						class="box-border mx-6 flex py-4 justify-between"
+					>
 						<form
 							class="w-full h-14 flex items-center bg-white dark:bg-black justify-evenly rounded-md border-primary border"
 						>
-							<label
-								><IconSearch class="text-primary !w-6 !h-6"
-							/></label>
+							<label><IconSearch class="!w-6 !h-6" /></label>
 							<input
 								placeholder="搜索文档"
 								class="w-10/12 bg-white dark:bg-black outline-none"
 								v-model="inputText"
 							/>
 							<button aria-label="Close">
-								<IconClose class="dark:text-white text-black" />
+								<IconClose
+									class="dark:text-white text-black"
+									@click.prevent="inputText = ''"
+								/>
 							</button>
 						</form>
+						<button
+							class="text-primary text-sm ml-2"
+							@click="search.close"
+						>
+							Cancel
+						</button>
 					</div>
 					<div id="content" class="box-border mx-6 py-4">
 						<span class="text-primary">Documention</span>

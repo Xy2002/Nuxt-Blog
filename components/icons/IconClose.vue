@@ -3,7 +3,7 @@
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		role="img"
-		class="w-6 h-6 text-gray-500 hover:text-gray-700"
+		class="w-6 h-6 text-gray-500 hover:text-primary"
 		width="1em"
 		height="1em"
 		viewBox="0 0 24 24"
