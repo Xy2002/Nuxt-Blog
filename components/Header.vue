@@ -106,10 +106,10 @@
 					:to="tool.href"
 					:target="tool.target ? tool.target : '_blank'"
 					class="hidden lg:block"
-					><i
-						:class="[...tool.icon]"
+					><component
+						:is="'Icon' + tool.icon"
 						class="text-xl flex items-center"
-					></i
+					></component
 				></NuxtLink>
 			</div>
 		</div>

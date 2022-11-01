@@ -28,10 +28,10 @@
 							:key="index"
 							:to="tool.href"
 							:target="tool.target ? tool.target : '_blank'"
-							><i
-								:class="[...tool.icon]"
+							><component
+								:is="'Icon' + tool.icon"
 								class="text-xl flex items-center"
-							></i
+							></component
 						></NuxtLink>
 					</div>
 				</div>

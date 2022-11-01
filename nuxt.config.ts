@@ -7,11 +7,7 @@ export default defineNuxtConfig({
 		// add '~tailwind.config` alias
 		exposeConfig: true,
 	},
-	css: [
-		'~/assets/css/notion.css',
-		'~/assets/css/icons.css',
-		'~/assets/css/markdown.css',
-	],
+	css: ['~/assets/css/notion.css', '~/assets/css/markdown.css'],
 	content: {
 		highlight: {
 			theme: 'one-dark-pro',

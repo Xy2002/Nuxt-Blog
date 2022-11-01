@@ -16,8 +16,8 @@ export default defineAppConfig({
 			{
 				name: 'Github',
 				href: 'https://www.naiquoy.com',
-				icon: ['fi', 'fi-brands-github'],
 				target: '_blank',
+				icon: 'Github',
 			},
 		],
 	},
