@@ -15,7 +15,7 @@ export default defineAppConfig({
 		toolItem: [
 			{
 				name: 'Github',
-				href: 'https://www.naiquoy.com',
+				href: 'https://github.com/xy2002',
 				target: '_blank',
 				icon: 'Github',
 			},
