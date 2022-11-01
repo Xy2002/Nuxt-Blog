@@ -49,11 +49,7 @@
 									route.path.split('/')[1] ===
 										item._path.split('/')[1],
 							}"
-							:to="
-								item.children && item.children.length > 0
-									? item.children[0]._path
-									: item._path
-							"
+							:to="navigateUrl(item)"
 						>
 							{{ item.title }}</NuxtLink
 						>
@@ -127,4 +123,17 @@ const currentHoverIndex = ref(-1)
 const currentExtraHoverIndex = ref(-1)
 const { navigation } = useContent()
 const menu = useMenu()
+
+const navigateUrl = item => {
+	console.log(item)
+	let tempItem = item
+	while (tempItem) {
+		if (!!tempItem.children) {
+			tempItem = tempItem.children[0]
+		} else {
+			break
+		}
+	}
+	return tempItem._path
+}
 </script>
