@@ -52,4 +52,7 @@ export default defineNuxtConfig({
 		dataValue: 'theme',
 	},
 	darkMode: 'class',
+	nitro: {
+		preset: 'vercel',
+	},
 })
