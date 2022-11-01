@@ -78,13 +78,13 @@ useHead({
 		{
 			name: 'description',
 			content:
-				page.value.description ||
-				page.value.summary ||
+				page.value?.description ||
+				page.value?.summary ||
 				nuxtConfig.blogName,
 		},
 		{
 			name: 'keywords',
-			content: page.value.tags || ['Nuxt Content', 'Nuxt.js', 'Vue.js'],
+			content: page.value?.tags || ['Nuxt Content', 'Nuxt.js', 'Vue.js'],
 		},
 	],
 	titleTemplate: titleChunk => {
