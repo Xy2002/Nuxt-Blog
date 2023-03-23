@@ -55,4 +55,10 @@ export default defineNuxtConfig({
 	nitro: {
 		preset: 'vercel',
 	},
+	plugins: [
+		{
+			src: '~/plugins/mavonEditor',
+			mode: 'client',
+		},
+	],
 })
