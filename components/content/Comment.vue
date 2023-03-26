@@ -4,67 +4,64 @@
 			<div class="w-full border-t mb-8"></div>
 			<div class="flex gap-4">
 				<div
-					class="flex flex-row flex-1 border-[#909399] border-opacity-[0.31] border rounded"
+					class="flex flex-row flex-1 border-[#909399] border-opacity-[0.31] border rounded dark:border-[#DCDFE6]"
 				>
 					<div
 						style="
 							background-clip: padding-box;
 							background-color: rgba(144, 147, 153, 0.13);
 						"
-						class="text-[#2C3E50] px-4 py-2 w-1/3 text-center whitespace-nowrap text-sm"
+						class="text-[#2C3E50] px-4 py-2 w-1/3 text-center whitespace-nowrap text-sm dark:text-[#adbac7]"
 					>
 						昵称
 					</div>
-					<div class="px-3 box-border">
-						<input
-							type="text"
-							class="w-full h-full outline-none"
-							placeholder="必填"
-							v-model="name"
-						/>
-					</div>
+
+					<input
+						type="text"
+						class="px-3 box-border w-full h-full outline-none dark:bg-transparent border focus:border-[#409eff] dark:border-transparent dark:focus:border-[#409eff]"
+						placeholder="必填"
+						v-model="name"
+					/>
 				</div>
 				<div
-					class="flex flex-row flex-1 border-[#909399] border-opacity-[0.31] border rounded"
+					class="flex flex-row flex-1 border-[#909399] border-opacity-[0.31] border rounded dark:border-[#DCDFE6]"
 				>
 					<div
 						style="
 							background-clip: padding-box;
 							background-color: rgba(144, 147, 153, 0.13);
 						"
-						class="text-[#2C3E50] px-4 py-2 w-1/3 text-center whitespace-nowrap text-sm"
+						class="text-[#2C3E50] px-4 py-2 w-1/3 text-center whitespace-nowrap text-sm dark:text-[#adbac7]"
 					>
 						邮箱
 					</div>
-					<div class="px-3 box-border">
-						<input
-							type="text"
-							class="w-full h-full outline-none"
-							placeholder="必填"
-							v-model="email"
-						/>
-					</div>
+
+					<input
+						type="text"
+						class="px-3 box-border w-full h-full outline-none dark:bg-transparent border focus:border-[#409eff] dark:border-transparent dark:focus:border-[#409eff]"
+						placeholder="必填"
+						v-model="email"
+					/>
 				</div>
 				<div
-					class="flex flex-row flex-1 border-[#909399] border-opacity-[0.31] border rounded"
+					class="flex flex-row flex-1 border-[#909399] border-opacity-[0.31] border rounded dark:border-[#DCDFE6]"
 				>
 					<div
 						style="
 							background-clip: padding-box;
 							background-color: rgba(144, 147, 153, 0.13);
 						"
-						class="text-[#2C3E50] px-4 py-2 w-1/3 text-center whitespace-nowrap text-sm"
+						class="text-[#2C3E50] px-4 py-2 w-1/3 text-center whitespace-nowrap text-sm dark:text-[#adbac7]"
 					>
 						网址
 					</div>
-					<div class="px-3 box-border">
-						<input
-							type="text"
-							class="w-full h-full outline-none"
-							placeholder="选填"
-							v-model="url"
-						/>
-					</div>
+
+					<input
+						type="text"
+						class="px-3 box-border w-full h-full outline-none dark:bg-transparent border focus:border-[#409eff] dark:border-transparent dark:focus:border-[#409eff]"
+						placeholder="选填"
+						v-model="url"
+					/>
 				</div>
 			</div>
 			<mavon-editor
@@ -100,7 +97,9 @@
 			</div>
 			<div class="mt-8">
 				<div class="flex justify-between">
-					<div class="text-xl text-[#2c3e50] font-bold">
+					<div
+						class="text-xl text-[#2c3e50] font-bold dark:text-[#adbac7]"
+					>
 						{{ comments.length }}条评论
 					</div>
 					<div @click="refresh">
@@ -142,18 +141,22 @@
 							{{ comment.name }}
 						</span>
 
-						<span class="text-sm text-[#2c3e50] ml-2">{{
-							Math.floor(
-								(new Date() - Date.parse(comment.createdAt)) /
-									(24 * 3600 * 1000)
-							) > 0
-								? Math.floor(
-										(new Date() -
-											Date.parse(comment.createdAt)) /
-											(24 * 3600 * 1000)
-								  ) + '天前'
-								: '今天'
-						}}</span>
+						<span
+							class="text-sm text-[#2c3e50] ml-2 dark:text-[#adbac7]"
+							>{{
+								Math.floor(
+									(new Date() -
+										Date.parse(comment.createdAt)) /
+										(24 * 3600 * 1000)
+								) > 0
+									? Math.floor(
+											(new Date() -
+												Date.parse(comment.createdAt)) /
+												(24 * 3600 * 1000)
+									  ) + '天前'
+									: '今天'
+							}}</span
+						>
 						<div v-html="comment.body"></div>
 						<div class="text-[#999999] text-sm font-normal mb-4">
 							<span>{{ comment.os }}</span>
